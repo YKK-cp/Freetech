@@ -15,7 +15,7 @@ def user_pic_directory_path(instance, filename):
 
 class Pic(models.Model):
     post = models.ForeignKey(Post, on_delete=models.CASCADE)
-    # pic_comment_id = models.ForeignKey(Comments, on_delete=models.CASCADE)
+    pic_comment_id = models.ForeignKey(Comments, on_delete=models.CASCADE)
     image = models.ImageField(upload_to=user_pic_directory_path)
 
 def user_vid_directory_path(instance, filename):

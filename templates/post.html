@@ -6,6 +6,9 @@
 </head>
 <body>
      <h1 align="center" style="color:Pink">Welcome! {{ user.username }}</h1>
+     <div>
+         <a type="submit" href="/show/{{ user.id }}/">My home page</a>
+     </div>
      <hr/>
     <form method="POST" action="/post/{{ user.id }}/" enctype="multipart/form-data">
         {% csrf_token %}

@@ -17,6 +17,11 @@
                 <video src="/media/{{ item2.content }}" height="200" width="300" controls></video>
             {% endif %}
         {% endfor %}
+        <br/>
+        <!--<a href="comment.html" type="submit">Comment</a>-->
+        <form method="post" action="{% url 'comment_page' content.id %}">
+            <input type="submit" value="Comment">
+        </form>
         <hr/>
     {% endfor %}
 </body>
